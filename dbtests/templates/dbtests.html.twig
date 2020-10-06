@@ -1,0 +1,58 @@
+<style>
+#dbtests {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 10%;
+    vertical-align: top;
+}
+
+#dbtests svg{
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+#dbtests text.label {
+    font: 13px sans-serif;
+    font-weight: bold;
+    fill: steelblue;
+}
+#dbtests text.value {
+    font-size: 120%;
+    fill: black;
+}
+
+.axisHorizontal path{
+    fill: none;
+}
+
+.axisHorizontal .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+    fill: steelblue;
+    fill-opacity: .9;
+}
+
+</style>
+<div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{label}}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+        {{content}}
+       
+       <div id="dbtests">
+       <h2>Respiratory Tests = <span class="total"></span> <span class="updated"></span></h2>
+        <svg></svg>
+       </div>
+    {% endblock %}
+</div>

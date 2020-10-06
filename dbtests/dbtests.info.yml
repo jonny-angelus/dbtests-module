@@ -1,0 +1,5 @@
+name: Dashboard Tests
+type: module
+description: 'Provides D3 rendering of Test Viruses.'
+core: 8.x
+package: Dashboards
